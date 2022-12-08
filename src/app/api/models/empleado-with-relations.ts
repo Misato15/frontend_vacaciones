@@ -9,7 +9,6 @@ import { VacacionesWithRelations } from './vacaciones-with-relations';
 export interface EmpleadoWithRelations {
   cargo?: CargoWithRelations;
   cargoId?: string;
-  cargo_id: string;
   disponible: boolean;
   fechaIngreso: string;
   id: string;

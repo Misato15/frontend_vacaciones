@@ -2,7 +2,6 @@
 /* eslint-disable */
 export interface Empleado {
   cargoId?: string;
-  cargo_id: string;
   disponible: boolean;
   fechaIngreso: string;
   id: string;

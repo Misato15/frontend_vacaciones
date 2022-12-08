@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { MantenimientoRoutingModule } from './mantenimiento-routing.module';
 import { EmpleadoComponent } from './empleado/empleado.component';
@@ -17,6 +18,12 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
 import { NzMessageModule } from 'ng-zorro-antd/message'
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+
 
 
 
@@ -30,6 +37,8 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
   imports: [
     CommonModule,
     MantenimientoRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     NzTableModule,
     NzDividerModule,
     NzIconModule,
@@ -37,7 +46,12 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     NzButtonModule,
     NzPopconfirmModule,
     NzMessageModule,
-    NzModalModule
+    NzModalModule,
+    NzFormModule,
+    NzInputModule,
+    NzRadioModule,
+    NzDatePickerModule,
+    NzSelectModule
   
   ]
 })

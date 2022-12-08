@@ -6,7 +6,6 @@
  */
 export interface NewEmpleadoInCargo {
   cargoId?: string;
-  cargo_id: string;
   disponible: boolean;
   fechaIngreso: string;
   nombre: string;

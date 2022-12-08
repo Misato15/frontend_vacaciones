@@ -34,5 +34,14 @@ ngOnInit(): void{
     this.messageService.info('Su registro sigue activo!')
   } 
 
- 
+  ocultar():void{
+    this.visible=false    
+  }
+  
+  mostrar(data?:Empleado):void{
+    this.visible=true
+  }
+
+
+  guardar():void{}
 }

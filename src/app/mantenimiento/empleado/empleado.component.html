@@ -4,7 +4,7 @@
     </div>
 </div>
 <div nz-row>
-    <div nz-col nzSpan="24"><button  nz-button nzType="primary">Nuevo Empleado</button></div>
+    <div nz-col nzSpan="24"><button (click)="mostrar()" nz-button nzType="primary">Nuevo Empleado</button></div>
 </div>
 <hr>
 <div nz-row>
@@ -30,7 +30,7 @@
                         <div *ngIf="data.disponible"><i nz-icon nzType="check-square" nzTheme="outline"></i></div>
                     </td>
                     <td>
-                        <a ><i nz-icon nzType="edit" nzTheme="twotone"></i></a>
+                        <a (click)="mostrar(data)"><i nz-icon nzType="edit" nzTheme="twotone"></i></a>
                         <nz-divider nzType="vertical"></nz-divider>
                         <a nz-popconfirm nzPopconfirmTitle="¿Está seguro de borrar el registro?"
                             nzPopconfirmPlacement="bottom" (nzOnConfirm)="eliminar(data.id)" (nzOnCancel)="cancel()"
@@ -44,10 +44,14 @@
 </div>
 
 
-    <nz-modal [(visible)]="isVisible" nzTitle="Administración Empleado" >
+    <nz-modal [(nzVisible)]="visible" nzTitle="Administración Empleado" >
       <ng-container *nzModalContent>
         <p>Content one</p>
         <p>Content two</p>
         <p>Content three</p>
       </ng-container>
+      <div *nzModalFooter>
+      <button nz-button nzType="default" (click)="ocultar()">Cancelar</button>
+      <button nz-button nzType="primary" (click)="guardar()" >Guardar</button>
+    </div>
     </nz-modal>
